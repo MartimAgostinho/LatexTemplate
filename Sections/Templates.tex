@@ -1,0 +1,44 @@
+\section{Template}
+
+\begin{table}[h]
+    \centering
+    \caption{Comparison of Key Parameters for MCP6001, TL084, and LM324}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+        \toprule
+        \textbf{Characteristic} & \textbf{MCP6001} & \textbf{TL084} & \textbf{LM324} \\
+        \midrule
+        Max Output (V) & $(V+)-25mV$ & $(V+)$ & $(V+) - 1.5V$ \\
+        \midrule
+        Min Output (V) & $(V-)+25mV$ & $(V-) + 1.5V$ & $(V-) + 150mV$ \\
+        \midrule
+        Supply Range (V) & $1.8V$ to $6.0V$ & $4.5V$ to $40V$ & $3V$ to $36V$ \\
+        \midrule
+        Offset (mV) & $\pm 4.5mV$ & $1mV$ & $\pm 3 mV$ \\
+        \midrule
+        Max Output (mA) & $\pm 23 mA$ $(5.5V)$ & $10 mA$ & $\pm 30 mA$ \\
+        \midrule
+        Idle Consumption & $100 \mu A $ & $1.4$ $mA$ & $240 \mu A$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:opamp}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics*[scale = 0.5]{Images/NovaFct.png}
+    \caption{Logo da Nova FCT}
+    \label{wrap-fig:1}
+\end{figure}
+
+\begin{lstlisting}[language=Matlab, caption=Matlab code example]
+    Fdz
+    printf('Polos: ');
+    PlFdz
+    %figure(3);
+    pzmap(Fdz);
+    %figure(4);
+    step(Fdz);
+\end{lstlisting}
+
+% Add citation commands where necessary
+% Example: \cite{reference_label}

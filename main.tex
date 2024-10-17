@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+% ----------------------------------------------------------------------
+% Define external packages, language, margins, fonts, new commands 
+% and colors
+% ----------------------------------------------------------------------
+\usepackage[utf8]{inputenc} % Codification
+\usepackage[english]{babel} % Writing idiom
+
+\usepackage[export]{adjustbox} % Align images
+\usepackage{amsmath} %a Extra commands for math mode
+\usepackage{amssymb} % Mathematical symbols
+\usepackage{anysize} % Personalize margins
+    \marginsize{2cm}{2cm}{2cm}{2cm} % {left}{right}{above}{below}
+\usepackage{appendix} % Appendices
+\usepackage{cancel} % Expression cancellation
+\usepackage{caption} % Captions
+    \captionsetup{labelfont={bf}}
+\usepackage{cite} % Citations, like [1 - 3]
+\usepackage{color} % Text coloring
+\usepackage{fancyhdr} % Head note and footnote
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{
+        \includegraphics[scale = 0.4]{Images/NovaFct.png}
+    } % Left of Head note
+    \fancyhead[R]{\footnotesize Cadeira} % Right of Head note
+    \fancyfoot[L]{\footnotesize LEEC} % Left of Footnote
+    \fancyfoot[R]{\thepage  } % Center of Footnote
+    %\fancyfoot[R]{\footnotesize Degree} % Right of Footnote
+    \renewcommand{\footrulewidth}{0.4pt} % Footnote rule
+\usepackage{float} % Utilization of [H] in figures
+\usepackage{graphicx} % Figures in LaTeX
+\usepackage[colorlinks = true, plainpages = true, linkcolor = novablue, urlcolor = novablue, citecolor = novablue, anchorcolor = novablue]{hyperref}
+\usepackage{indentfirst} % First paragraph
+\usepackage[super]{nth} % Superscripts
+\usepackage{siunitx} % SI units
+\usepackage{subcaption} % Subfigures
+\usepackage{titlesec} % Font
+    \titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+    \titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+    \titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+    %\fancyfoot[C]{\thepage}
+
+%code
+\usepackage[breakable]{tcolorbox}
+
+% Code highlighting
+\usepackage{listings}
+\lstset{ 
+    backgroundcolor=\color{cellbackground}, % background color for the code block
+    basicstyle=\ttfamily,                   % font style
+    breakatwhitespace=false,                % automatic breaks only at whitespace
+    breaklines=true,                        % automatic line breaking
+    captionpos=b,                           % caption position
+    commentstyle=\color{gray},              % comment style
+    escapeinside={\%*}{*)},                 % if you want to add LaTeX within your code
+    keywordstyle=\color{blue},              % keyword style
+    stringstyle=\color{dkgreen},            % string style
+    frame=single,                           % adds a frame around the code
+    rulecolor=\color{cellborder},           % border color
+}
+
+% Exact colors from NB
+\definecolor{incolor}{HTML}{303F9F}
+\definecolor{outcolor}{HTML}{D84315}
+\definecolor{cellborder}{HTML}{CFCFCF}
+\definecolor{cellbackground}{HTML}{F7F7F7}
+
+%folders .tex
+\usepackage{subfiles}
+
+
+% Random text (not needed)
+\usepackage{lipsum}
+\usepackage{duckuments}
+
+% Tables
+\usepackage{tabularx} 
+\usepackage{booktabs}
+\usepackage{makecell}
+
+% New and re-newcommands
+\newcommand{\sen}{\operatorname{\sen}} % Sine function definition
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Specific rule definition
+\renewcommand{\appendixpagename}{\LARGE Appendices}
+
+% Colors
+
+\definecolor{novablue}{RGB}{0, 101, 189}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 Document                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% ----------------------------------------------------------------------
+% Cover
+% ----------------------------------------------------------------------
+\begin{center}
+    \begin{figure}
+        \vspace{-1.0cm}
+        \includegraphics[scale = 1, left]{Images/NovaFct.png} % Nova logo
+    \end{figure}
+
+    \mbox{}\\[2.0cm]
+    \textsc{\Huge Curso}\\[2.5cm]
+    \textsc{\LARGE Cadeira}\\[2.0cm]
+    \HRule\\[0.4cm]
+    {\large \bf {Title -- Report Template Martim c: } [\texttt{EN}]}\\[0.2cm]
+    \HRule\\[1.5cm]
+\end{center}
+
+\begin{flushleft}
+    \textbf{Authors:}
+\end{flushleft}
+
+\begin{center}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushleft}
+            Martim Duarte Agostinho (70392)\\
+            Lorem Ipsum (\texttt{StudentID} $\in \mathbb{Z}^+$)\\
+            Lorem Ipsum (\texttt{StudentId} $\in \mathbb{Z}^+$)
+        \end{flushleft}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \href{mailto:md.agostinho@campus.fct.unl.pt}{\texttt{md.agostinho@campus.fct.unl.pt}}\\
+            \href{mailto:lorem.ipsum@campus.fct.unl.pt}{\texttt{lorem.ipsum@campus.fct.unl.pt}}\\
+            \href{mailto:lorem.ipsum@campus.fct.unl.pt}{\texttt{lorem.ipsum@campus.fct.unl.pt}}
+        \end{flushright}
+    \end{minipage}
+\end{center}
+ 
+% Caixa a dizer o grupo
+%\begin{flushleft}
+%    \large $\boxed{\text{\bf Group} \ \clubsuit}$\\[4.0cm]
+%\end{flushleft}
+
+\vspace{6cm}
+
+\begin{center}
+    \large \bf 2023/2024 -- \nth{2} Semester, P4
+\end{center}
+
+\thispagestyle{empty}
+
+\setcounter{page}{0}
+
+\newpage
+
+\newpage
+
+\tableofcontents % Generates the table of contents
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+\subfile{Sections/Templates.tex}
+
+\end{document}
