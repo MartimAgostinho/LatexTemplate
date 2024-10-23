@@ -1,3 +1,3 @@
 # LatexTemplate
 
-Person Latex Template for reports
+Personal Latex Template for reports
