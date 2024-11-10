@@ -1,12 +1,3 @@
-main.aux
-main.log
-main.pdf
-main.synctex.gz
-main.toc
-main.out
-main.lof
-main.fls
-main.fdb_latexmk
-main.bbl
-main.blg
-main.atfi
+
+main.*
+!main.tex
